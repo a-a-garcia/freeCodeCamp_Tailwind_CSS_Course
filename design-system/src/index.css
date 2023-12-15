@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* html {
+    color: red;
+    this makes all text red
+  } */
+
+  h1 {
+    @apply mb-2 text-3xl font-bold;
+    /* this is a way to apply all these styles to all h1. */
+    /* you should only use this for styles that are repeated constantly */
+  }
+
+  h2 {
+    @apply mb-2 text-2xl font-semibold;
+  }
+
+  a {
+    @apply underline text-blue-600 hover:text-purple-500 transition decoration-wavy underline-offset-4;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg shadow-lg text-white hover:transition hover:duration-300 hover:opacity-80 disabled:bg-slate-400/30 hover:disabled:opacity-100
+    hover:disabled:bg-slate-400/30;
+  }
+  /* remember that disabled is NOT a class. it's a keyword on the actual button element */
+
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-purple-600 hover:bg-purple-500;
+  }
+
+  input, 
+  select {
+    @apply text-slate-600 p-1 mb-1 border border-slate-300 outline-none rounded
+  }
+
+  input[type="text"] {
+    @apply placeholder:italic disabled:bg-slate-100 
+  }
+
+  input[type="checkbox"] {
+    @apply p-2 accent-purple-500 mr-1 mb-0 mt-0.5;
+  }
+
+  label {
+    @apply text-sm text-slate-700 font-medium leading-4;
+  }
+
+  select {
+    @apply pr-8;
+  }
+  
+  .Select {
+    @apply border border-slate-300 outline-none rounded inline-block cursor-pointer transition;
+  }
+
+  .Select .child {
+    @apply text-slate-500 px-2 py-1;
+  }
+
+  .Select ul li {
+    @apply hover:bg-slate-100;
+  }
+}
